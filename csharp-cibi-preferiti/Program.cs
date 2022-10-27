@@ -96,17 +96,34 @@ Console.WriteLine();
 
 //Snack 4
 //Calcola la somma e la media dei numeri da 2 a 10.
-int[] numeri = { 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-int media = numeri[0];
-int somma = 0;
-for (int i = 0; i < numeri.Length; i++)
+//int[] numeri = { 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+//int media = numeri[0];
+//int somma = 0;
+//for (int i = 0; i < numeri.Length; i++)
 
+//{
+//    somma += numeri[i];
+//}
+
+//Console.WriteLine("La somma dei numeri è: " + somma);
+
+//media = somma / numeri.Length;
+
+//Console.WriteLine("La media dei numeri è: " + media);
+
+//Snack 5 
+//Il software richiede all'utente di inserire un numero.
+//Se il numero inserito è pari stampa il numero, se è dispari stampa il numero successivo.
+
+Console.WriteLine("Inserisci un numero: ");
+int num = Convert.ToInt32(Console.ReadLine());
+
+if (num % 2 == 0)
 {
-    somma += numeri[i];
+    Console.WriteLine("Numero inserito: " + num);
+} else
+{
+    Console.WriteLine("Numero inserito: " + num++);
+    Console.WriteLine("Stampo numero successivo al dispari inserito: " + num);
 }
 
-Console.WriteLine("La somma dei numeri è: " + somma);
-
-media = somma / numeri.Length;
-
-Console.WriteLine("La media dei numeri è: " + media);
