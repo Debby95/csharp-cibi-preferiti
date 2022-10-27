@@ -3,7 +3,7 @@
 using System;
 using System.IO;
 
-string[] cibiPreferiti = { "Pasta", "Pizza", "Broccoli", "Cotoletta", "Pane" };
+string[] cibiPreferiti = { "Pasta", "Pizza", "Broccoli", "Cotoletta", "Pane", "Polpette" };
 
 //stampo la lunghezza della lista
 
@@ -20,5 +20,19 @@ Console.WriteLine("Cibo Top: " + cibiPreferiti[0]);
 //stampo l'ultimo cibo preferito
 Console.WriteLine("Ultimo cibo preferito: " + cibiPreferiti[cibiPreferiti.Length-1]);
 //stampo il cibo preferito presente al centro
-Console.WriteLine("Cibo presente al centro: " + cibiPreferiti[2]);
+if(cibiPreferiti.Length % 2 == 0)
+{
+    //pari
+    int medianaSuperiore = cibiPreferiti.Length / 2;
+    int medianaInferiore = medianaSuperiore -1;
+    Console.WriteLine("Cibo presente al centro: {0} e {1}", cibiPreferiti[medianaInferiore], cibiPreferiti[medianaSuperiore]);
+    //***SE AVESSIMO UN ALTRO ELEMENTO NELL'ARRAY***
+
+} else
+{
+    //dispari
+    int mediana = cibiPreferiti.Length / 2;
+    Console.WriteLine("Cibo presente al centro: " + cibiPreferiti[mediana]);
+}
+
 
