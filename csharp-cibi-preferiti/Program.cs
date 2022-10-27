@@ -18,7 +18,7 @@ for (int i = 0; i < cibiPreferiti.Length; i++)
 //stampo il cibo top
 Console.WriteLine("Cibo Top: " + cibiPreferiti[0]);
 //stampo l'ultimo cibo preferito
-Console.WriteLine("Ultimo cibo preferito: " + cibiPreferiti[3]);
+Console.WriteLine("Ultimo cibo preferito: " + cibiPreferiti[4]);
 //stampo il cibo preferito presente al centro
 Console.WriteLine("Cibo presente al centro: " + cibiPreferiti[2]);
 
