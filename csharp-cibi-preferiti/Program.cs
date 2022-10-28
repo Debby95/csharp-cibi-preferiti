@@ -145,24 +145,44 @@ Console.WriteLine();
 //Verificare tramite una funzione che le due parole abbiano la stessa lunghezza.
 //Se hanno la stessa lunghezza, stamparle entrambe, altrimenti stampare la più lunga delle due.
 
-Console.WriteLine("Inserisci due parole: ");
-string par1 = Console.ReadLine();
-string par2 = Console.ReadLine();
+//Console.WriteLine("Inserisci due parole: ");
+//string par1 = Console.ReadLine();
+//string par2 = Console.ReadLine();
 
-string parolaPiuLunga = "";
-Console.WriteLine(lunghezzaParole(par1, par2));
+//string parolaPiuLunga = "";
+//Console.WriteLine(lunghezzaParole(par1, par2));
 
 
-string lunghezzaParole(string parola1, string parola2)
+//string lunghezzaParole(string parola1, string parola2)
+//{
+
+//    if (parola1.Length == parola2.Length)
+//    {
+//        parolaPiuLunga = parola1 + " " + parola2;
+//        return parolaPiuLunga;
+//    } else if (parola1.Length > parola2.Length)
+//    {
+//        return par1;
+//    } else
+//        return par2;
+
+//}
+
+//Snack 2
+//Scrivere una funzione per verificare se un numero è pari o dispari.
+//Quindi chiedere un numero all’utente e comunicargli se è pari o dispari.
+
+Console.WriteLine("Scrivi un numero: ");
+int numero = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine(numeroPariODispari(numero));
+
+string numeroPariODispari(int num)
 {
-
-    if (parola1.Length == parola2.Length)
+    if (num % 2 == 0)
     {
-        parolaPiuLunga = parola1 + " " + parola2;
-        return parolaPiuLunga;
-    } else if (parola1.Length > parola2.Length)
-    {
-        return par1;
+        return "Numero pari";
     } else
-        return par2;
+    {
+        return "Numero dispari";
     }
+}
