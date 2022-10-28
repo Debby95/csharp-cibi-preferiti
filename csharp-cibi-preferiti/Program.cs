@@ -3,6 +3,7 @@
 using System;
 using System.Globalization;
 using System.IO;
+using System.Reflection.Metadata.Ecma335;
 
 //string[] cibiPreferiti = { "Pasta", "Pizza", "Broccoli", "Cotoletta", "Pane", "Polpette" };
 
@@ -115,15 +116,53 @@ Console.WriteLine();
 //Il software richiede all'utente di inserire un numero.
 //Se il numero inserito è pari stampa il numero, se è dispari stampa il numero successivo.
 
-Console.WriteLine("Inserisci un numero: ");
-int num = Convert.ToInt32(Console.ReadLine());
+//Console.WriteLine("Inserisci un numero: ");
+//int num = Convert.ToInt32(Console.ReadLine());
 
-if (num % 2 == 0)
-{
-    Console.WriteLine("Numero inserito: " + num);
-} else
-{
-    Console.WriteLine("Numero inserito: " + num++);
-    Console.WriteLine("Stampo numero successivo al dispari inserito: " + num);
-}
+//if (num % 2 == 0)
+//{
+//    Console.WriteLine("Numero inserito: " + num);
+//} else
+//{
+//    Console.WriteLine("Numero inserito: " + num++);
+//    Console.WriteLine("Stampo numero successivo al dispari inserito: " + num);
+//}
 
+//Snack 6
+//In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby.
+//Chiedi all'utente di inserire il suo nome e comunicagli se può partecipare alla festa.
+
+//Snack 7 
+//Crea un array vuoto
+//Chiedi per 6 volte all'utente di inserire un numero, se è dispari inseriscilo nell'array.
+
+
+//Snack 8 
+
+//FUNZIONI
+//Snack 1
+//1. Dare la possibilità di inserire due parole.
+//Verificare tramite una funzione che le due parole abbiano la stessa lunghezza.
+//Se hanno la stessa lunghezza, stamparle entrambe, altrimenti stampare la più lunga delle due.
+
+Console.WriteLine("Inserisci due parole: ");
+string par1 = Console.ReadLine();
+string par2 = Console.ReadLine();
+
+string parolaPiuLunga = "";
+Console.WriteLine(lunghezzaParole(par1, par2));
+
+
+string lunghezzaParole(string parola1, string parola2)
+{
+
+    if (parola1.Length == parola2.Length)
+    {
+        parolaPiuLunga = parola1 + " " + parola2;
+        return parolaPiuLunga;
+    } else if (parola1.Length > parola2.Length)
+    {
+        return par1;
+    } else
+        return par2;
+    }
